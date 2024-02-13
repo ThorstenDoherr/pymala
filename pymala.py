@@ -495,7 +495,7 @@ class PymalaTable:
                             value = ''
                         else:
                             value = column[index]
-                            value = value.strip().replace('\t', "\\t").replace('\r\n', "\\n").replace('\n', "\\n").replace('\r', "\\n").replace('&amp;', '&').replace('&gt;', '>').replace('&lt;', '<')
+                            value = value.strip().replace('\t', " ").replace('\r\n', " ").replace('\n', " ").replace('\r', " ").replace('&amp;', '&').replace('&gt;', '>').replace('&lt;', '<')
                         if value:
                             has_data = True
                             if key: keycnt += 1
