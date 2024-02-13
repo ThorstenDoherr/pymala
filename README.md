@@ -5,7 +5,7 @@ This tool converts XML and, to some extend, HTML files to tab-delimited flat fil
 To get an overview of the options just call PyMaLa without parameters `py pymala.py`:
 ```
 PyMaLa - python markup-language to flat file converter
-version 2024.02.08
+version 2024.02.13
 pymala.py <script-file> [options ...]
 options:
 -input <input_template> : declares the document files using placeholders (* = any no of chars, ? = single char)

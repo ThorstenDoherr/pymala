@@ -936,7 +936,7 @@ def mp_read_collect(reader, pymala_path, out):
 def main(argv):
     if len(argv) <= 1:
         print("PyMaLa - python markup-language to flat file converter")
-        print("version 2024.02.08")
+        print("version 2024.02.13")
         print("pymala.py <script-file> [options ...]")
         print("options:")
         print("-input <input_template> : declares the document files using placeholders (* = any no of chars, ? = single char)")
