@@ -234,7 +234,7 @@ shop = shop>name
 address = shop>address
 *>*list
 type = name
-id = customer>client<id
+id = customer|client<id
 # resetting the root
 <
 name = *.clientlist.customer|client.name
