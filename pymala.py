@@ -183,7 +183,6 @@ class PymalaPath:
         self.root = []
         self.paths = {}
         self.data = None
-        self.sep = ","
         if not data: self.data = PymalaTable()
         else:
             if isinstance(data, str): self.data = PymalaTable(data)
@@ -341,7 +340,7 @@ class PymalaPath:
                             column.append('')
                         else:
                             pymala.reset()
-                            column.append(self.sep.join(pymala.collect()))
+                            column.append('|'.join(pymala.collect()))
                 columns = None
                 for branch in [branch for pymala, branch in branches if branch]:
                     columns = self.__collect(branch, properties)
@@ -867,7 +866,7 @@ class Pymala:
         """Returns a the next content following the last tag until another tag is encountered."""
         pos = self.pymala.find('<', start)
         if pos < 0: pos = len(self.pymala)
-        return (self.pymala[start:pos], pos)
+        return (self.pymala[start:pos].strip(), pos)
 
 class Timer:
     def __init__(self):
@@ -936,7 +935,7 @@ def mp_read_collect(reader, pymala_path, out):
 def main(argv):
     if len(argv) <= 1:
         print("PyMaLa - python markup-language to flat file converter")
-        print("version 2024.02.13")
+        print("version 2024.02.22")
         print("pymala.py <script-file> [options ...]")
         print("options:")
         print("-input <input_template> : declares the document files using placeholders (* = any no of chars, ? = single char)")
