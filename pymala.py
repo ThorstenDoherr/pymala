@@ -820,11 +820,11 @@ class Pymala:
                 gt = self.pymala.find('>', pos, end)
                 if gt < 0: break  # no valid tag possible
                 gt += 1
-                tag = self.pymala[pos:gt]
+                maybe = self.pymala[pos:gt]
                 for rex in rex_list:
-                    if rex.match(tag):
+                    if rex.match(maybe):
                         end = pos
-                        tag = tag
+                        tag = maybe
                         next = gt
                         break
                 if gt > end: break
